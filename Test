@@ -1,0 +1,4 @@
+IF(RecordType.DeveloperName =="Non_Investigative_Case",TEXT(Owner:User.County__c) , 
+IF( ISNULL(OwnerId) , TEXT(Originating_Screening__r.County_Assigned_to_Screening__c),
+IF( ISPICKVAL( County_Queue__c,"") , TEXT(Owner:User.County__c) , TEXT(County_Queue__c))
+))
